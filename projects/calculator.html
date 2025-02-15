@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <p>Enter an equation and press Calculate.</p>
+
+    <input type="text" id="calcInput">
+    <button onclick="calculate()">Calculate</button>
+    <p>Result: <span id="result">0</span></p>
+
+    <p><a href="../projects.html">Back to Projects</a></p>
+
+    <script>
+        function calculate() {
+            let input = document.getElementById("calcInput").value;
+            try {
+                document.getElementById("result").innerText = eval(input);
+            } catch (error) {
+                document.getElementById("result").innerText = "Error";
+            }
+        }
+    </script>
+</body>
+</html>
+
